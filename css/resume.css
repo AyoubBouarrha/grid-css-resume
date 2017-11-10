@@ -17,6 +17,10 @@ body{
     overflow-x: hidden; 
 }
 
+h1{
+    font-family: m-1m, sans-serif;
+}
+
 #wrapper{
     max-width: 1900px;/*900px;*/
     min-width: 320px;
