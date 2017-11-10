@@ -1,0 +1,96 @@
+
+/*Pour les grand écrans*/
+@media only screen and (min-width: 976px) {  
+    /*Photo à droit sur grand écran*/  
+    #wrapper header #profil-image{
+        display: block;
+        float: right;        
+    }
+}    
+
+
+/*Pour les petits écrans*/
+@media only screen and (max-width: 976px) {
+    /*header principale*/
+    #wrapper > header:first-child{
+        padding-left: 0px;
+        padding-right: 0px;    
+    }
+
+    header{
+        font-size: 1em;
+        text-align: center;
+    }   
+
+    section header{
+        text-align: center;
+    }
+
+    #competences{
+        grid-column: 1/3;
+        margin: auto;        
+        padding: 10px;
+    }
+
+    #competences article{        
+        padding: 30px;
+    }
+
+    .competence-conteneur progress{
+        width: 250px;
+    }
+
+    #hobbies{
+        grid-row: 7;
+        grid-column: 1/3;
+    }
+
+    .hobbie-conteneur{
+        width: 60%;
+        margin: auto;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #formation{
+        grid-column: 1/3;
+        border-style: solid;
+        border: 0px  solid #D6D6D6;
+        border-left: 4px  solid #333;    
+    }
+
+    #formation article{
+        padding: 10px;
+    }
+
+    #experiences{
+        grid-column: 1/3;    
+        padding: 15px;
+    }
+
+    #certifications{
+        grid-column: 1/3;
+        margin: auto;       
+        padding: 10px;
+        border-style: solid;
+        border: 0px  solid #D6D6D6;         
+        max-width: 611px; 
+    }   
+
+    .certification-conteneur{
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;  
+    }
+
+    #langues{
+        grid-row: 6;
+        grid-column: 1/3;
+    }
+    
+    footer span{
+        display: none;
+    }
+}
+    
+    
