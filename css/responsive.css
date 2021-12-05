@@ -4,7 +4,7 @@
     /*Photo à droit sur grand écran*/  
     #wrapper header #profil-image{
         display: block;
-        float: right;        
+        /*float: right; */       
     }
 }    
 

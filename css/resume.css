@@ -19,13 +19,13 @@ body{
 
 h1{
     font-family: m-1m, sans-serif;
-    color: #0E9E54;
+    color: #ddd;
     font-size: 2.2em;
 }
 
 progress[value]::-webkit-progress-value {
     background-image:
-         -webkit-linear-gradient(left, #0B9150, #0B9150);
+         -webkit-linear-gradient(left, #0057C9, #0057C9);
   
       border-radius: 2px; 
       background-size: 35px 20px, 100% 100%, 100% 100%;
@@ -46,32 +46,59 @@ progress[value]::-webkit-progress-value {
     justify-content : end;
 }
 
-#wrapper > header:first-child{
-    /* Occupation des deux colonnes */
-    grid-column: 1/3;
-    padding-top: 50px;
-    padding-left: 165px;
-    padding-right: 165px;    
-    padding-bottom: 50px;
-    background: #333;
-    color: #D6D6D6;
-    width: auto;    
-}
+#left-part{
+    grid-column: 1;    
+    background: rgb(166, 184, 209);
 
-#wrapper header #profil-image{    
-    border: 15px  solid #0B9150;
-    border-radius: 50%;
-    background: #fff;
-    box-shadow: 0px 10px 10px rgba(0,0,0,0.2);    
-    width: 250px;
-
-    animation-name: opacity-animation;
+    position: relative;
+    animation-name: bottom-show;
     animation-duration: 2s;
     animation-iteration-count: 1;
     animation-timing-function: ease-out;
     animation-delay: 1s;
     animation-fill-mode: forwards;
-    opacity: 0;    
+    opacity: 0;
+}
+
+#right-part{
+    grid-column: 2;
+
+    position: relative;
+    animation-name: bottom-show;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#left-part > header:first-child{
+    /* Occupation des deux colonnes */
+    /*grid-column: 1/1;*/
+    padding-top: 20px; 
+    text-align: center;
+    padding-bottom: 20px;
+    background: #0057C9;
+    color: #D6D6D6;
+    width: auto;  
+    font-size: 1.7em;  
+}
+
+#left-part > header:first-child #job{
+  margin-top: -30px;
+}
+
+#wrapper header #profil-image{    
+    border: 30px  solid rgb(166, 184, 209)/*#6BB3FF*/;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.2);    
+    width: 350px;
+    display:block;
+    margin:auto;
+
+   
 }
 
 
@@ -85,16 +112,11 @@ progress[value]::-webkit-progress-value {
 #competences{      
     margin: auto;
     margin-top: 0px;
-    padding-left: 10px;
+    padding-left: 75px;
     position: relative;
+    grid-row: 2;
 
-    animation-name: bottom-show;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-out;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-    opacity: 0;
+    
 }
  
 #competences header{
@@ -107,7 +129,7 @@ progress[value]::-webkit-progress-value {
 }
 
 .competence-conteneur{
-    margin-top: 20px;
+    margin-top: 27px;
     display: grid;
     grid-template-columns: 15% 85%;
     grid-gap: 1em;
@@ -119,9 +141,13 @@ progress[value]::-webkit-progress-value {
 }
 
 .competence-conteneur progress{
-    width: 280px;
+    width: 400px;
     grid-column: 2/3;
     background: #444;    
+}
+
+.competence-conteneur .titre-competence{
+    font-size: 1.4em;   
 }
 
 .competence-conteneur .infobulle{
@@ -139,6 +165,31 @@ progress[value]::-webkit-progress-value {
 }
 
 
+.competence-autre-conteneur{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 15% 15% 25% 40%;
+    grid-gap: 1em;
+    align-items: center;      
+}
+
+.competence-autre-conteneur .competence-autre-titre{
+    font-size: 1em;       
+}
+
+.competence-autre-conteneur img{
+    margin: auto;
+    grid-column: 1/2;
+    
+}
+
+.competence-autre-conteneur .titre-competence{
+    font-size: 1.4em;   
+    
+    grid-column: 2/5; 
+}
+
+
 /*Affichage d'info-bulle*/
 progress:hover ~ .infobulle {
     display: block;
@@ -152,11 +203,12 @@ progress:hover ~ .infobulle {
     align-self: stretch;    
     margin: auto;
     margin-top: 0px;
-    padding-left: 10px;
+    padding-left: 90px;
+    
 }
 
 #hobbies header{
-    margin-top: 50px;
+    margin-top: 20px;
 }
 #hobbies article{
     margin-top: 30px;
@@ -173,33 +225,67 @@ progress:hover ~ .infobulle {
     margin: auto;
 }
 .hobbie-conteneur span{
-    font-size: 1.1em;    
+    font-size: 1.4em;    
+}
+
+
+
+#contact{
+    /*positionné sur la premiere colonne*/
+    grid-column: 1; 
+    align-self: stretch;    
+    margin: auto;
+    margin-top: 50px;
+    padding-left: 90px;
+    
+}
+
+#contact header{
+    margin-top: 20px;
+}
+#contact article{
+    margin-top: 20px;
+}
+
+.contact-conteneur{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-gap: 0.5em;
+    align-items: center;      
+}
+
+.contact-conteneur h2{
+    margin: auto;
+}
+.contact-conteneur span{
+    font-size: 1.4em;    
 }
 
 #formation{
+    
+    font-size: 0.9rem;
     /*positionné sur la deuxième colonne*/
-    grid-column: 2;    
-    grid-row: 2/3;
-
+    grid-column: 2/3;
+    grid-row: 1;
+    border: 0px  solid #D6D6D6;
+    border-top: 4px  solid #333;
     align-self: stretch;
     border-style: solid;
-    border: 0px  solid #D6D6D6;
-    border-left: 4px  solid #333;
     padding-left: 30px;
 
-    position: relative;
-    animation-name: bottom-show;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-out;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
-    opacity: 0;
+
 }
 
 
 #formation header{
-    margin-top: 50px;
+    margin-top: 20px;
+    font-size: 1.6em;
+}
+
+
+#formation header span{    
+    font-size: 1.6em;
 }
 
 #formation article{
@@ -207,11 +293,11 @@ progress:hover ~ .infobulle {
 }
 
 .formation-conteneur dl dt {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .formation-conteneur dl dt h3{
-    font-size: 1.3em;
+    font-size: 1.6em;
     text-align: left;
     margin-left: 30px;
 }
@@ -221,7 +307,7 @@ progress:hover ~ .infobulle {
     grid-template-columns: 75% 25%;    
     align-items: center;
     font-weight: normal;
-    font-size: 1.1em;
+    font-size: 1.5em;
 }
 
 .formation-conteneur dl dd .date-formation{
@@ -231,15 +317,23 @@ progress:hover ~ .infobulle {
 
 
 #experiences{
+
+    
+    font-size: 0.90rem;
+    grid-row: 2;
     align-self: stretch;
     border-style: solid;
     border: 0px  solid #D6D6D6;
-    border-left: 4px  solid #333;
     padding-left: 30px;
 }
 
 #experiences header{
-    margin-top: 50px;
+    margin-top: 50px;    
+    font-size: 1.6em;
+}
+
+#experiences header span{   
+    font-size: 1.6em;
 }
 
 #experiences article{
@@ -255,13 +349,13 @@ progress:hover ~ .infobulle {
 }
 
 .experience-conteneur dl dt h3 {
-    font-size: 1.3em;
+    font-size: 1.6em;
     text-align: left;
     margin-left: 30px;
 }
 
 .experience-conteneur dl dt .duree-experience {
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: normal;
 }
 
@@ -270,95 +364,148 @@ progress:hover ~ .infobulle {
 }
 
 .experience-conteneur dl dd .lieu-experience{
-    font-size: 1.1em;
+    font-size: 1.5em;
 }
 
 .experience-conteneur dl dd .sujet-experience{
-    font-size: 1.1em;
+    font-size: 1.5em;
     font-weight: normal;
+}
+
+.experience-conteneur dl dd .technologies-experience{
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: normal;
+    display: block;
 }
 
 
 
 #certifications{
+    font-size: 0.6rem;
     /*positionné sur la deuxième colonne*/
     grid-column: 2;  
     align-self: stretch;
     border-style: solid;
     border: 0px  solid #D6D6D6;
-    border-left: 4px  solid #333;
+    border-top: 4px  solid #333;
     padding-left: 30px;
 }
 
 #certifications header{
-    margin-top: 50px;
+    margin-top: 50px;   
+    font-size: 1.6em;
+}
+
+
+
+#certifications header span{
+    font-size: 1.6em;
 }
 
 #certifications article{
-    margin-top: 50px;
+    margin-top: 30px;
     margin-left: 20px;
 }
 
 .certification-conteneur dl dd{
-    margin-top: 20px;
+    margin-top: 00px;
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 80% 20%;
     grid-gap: 0.5em;
     align-items: center; 
     font-weight: normal;     
-    font: 1.1em;
+    font-size: 1.5em;
+}
+
+.certification-conteneur dl dt{   
+    
+    display: grid;
+    grid-template-columns: 75% 25%;    
+    font-size: 1.5em;
+}
+
+.certification-conteneur dl dt h3{   
+    
+    margin-top: 15px;
+}
+
+.certification-conteneur dl dt .lien-certification{       
+    margin-top: 15px;
+}
+
+.certification-conteneur dl dt .lien-certification a{       
+    color: #0057C9;
+    text-decoration: none;
+}
+
+.certification-conteneur dl dt .lien-certification a:visited{       
+    color: #0057C9;
 }
 
 #langues{
+
+    
+    font-size: 0.6rem;
+
     /*positionné sur la premiere colonne*/
     grid-column: 1; 
     grid-row : 4/5;
     margin: auto;
     margin-top: 0px;
-    padding-left: 10px;
+    
+    padding-left: 30px;
+    
+    border-top: 4px  solid #333;
 
 }
 
 #langues header{
     margin-top: 50px;
+    font-size: 1.6em;
+}
+
+#langues header span{
+    font-size: 1.6em;
 }
 
 #langues article{
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .langue-conteneur{
     margin-top: 20px;
     display: grid;
-    grid-template-columns: 40% 70%;
+    grid-template-columns: 30% 70% ;
     grid-gap: 0.5em;
     align-items: center;      
 }
 
 .langue-conteneur div{    
     text-align: left;    
-    font-size: 1.1em;    
+    font-size: 1.6em;    
 }
 
 .langue-conteneur .titre-langue{
-    font-size: 1.1em; 
+    font-size: 1.6em; 
     margin-left: 20px;
 }
 
 .langue-conteneur div progress{
     background: #333;
-    width: 100px;
+    width: 400px;
 }
 
 .langue-conteneur .niveau-langue{
-    font-size: 0.9em; 
+    font-size: 1.1em; 
     margin-left: 20px;
     font-weight: normal;
 }
 
 
 footer{
-    margin-top: 50px;    
+    font-size: 1.em;
+    margin-top: 25px;    
     text-align: center;
     padding: 15px;    
     /* Occupation des deux colonnes */
