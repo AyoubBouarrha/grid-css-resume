@@ -11,7 +11,7 @@ html{
 }
 
 body{
-    background: #D6D6D6;
+    background: #ececec;
     margin: 0px;
     padding: 0px;
     overflow-x: hidden; 
@@ -25,12 +25,17 @@ h1{
 
 progress[value]::-webkit-progress-value {
     background-image:
-         -webkit-linear-gradient(left, #0057C9, #0057C9);
+         -webkit-linear-gradient(left, #893a01, #893a01);
   
       border-radius: 2px; 
       background-size: 35px 20px, 100% 100%, 100% 100%;
   }
 
+
+.bio{
+    padding: 30px;
+    font-size: 35px;
+}
 
 
 #wrapper{
@@ -47,8 +52,8 @@ progress[value]::-webkit-progress-value {
 }
 
 #left-part{
-    grid-column: 1;    
-    background: rgb(166, 184, 209);
+    grid-column: 1;   
+    background: #deb89c;
 
     position: relative;
     animation-name: bottom-show;
@@ -79,7 +84,7 @@ progress[value]::-webkit-progress-value {
     padding-top: 20px; 
     text-align: center;
     padding-bottom: 20px;
-    background: #0057C9;
+    background: #893a01;
     color: #D6D6D6;
     width: auto;  
     font-size: 1.7em;  
@@ -90,12 +95,13 @@ progress[value]::-webkit-progress-value {
 }
 
 #wrapper header #profil-image{    
-    border: 30px  solid rgb(166, 184, 209)/*#6BB3FF*/;
+    border: 35px  solid #deb89c/*#6BB3FF*/;
     border-radius: 50%;
     background: #fff;
     box-shadow: 0px 10px 10px rgba(0,0,0,0.2);    
-    width: 350px;
+    width: 390px;
     display:block;
+    padding: -22px;
     margin:auto;
 
    
@@ -120,7 +126,7 @@ progress[value]::-webkit-progress-value {
 }
  
 #competences header{
-    margin-top: 50px;
+    margin-top: 150px;
 }
 
 #competences article{
@@ -132,8 +138,8 @@ progress[value]::-webkit-progress-value {
     margin-top: 27px;
     display: grid;
     grid-template-columns: 15% 85%;
-    grid-gap: 1em;
-    align-items: center;      
+    align-items: center;
+    margin-left: 30px;   
 }
 
 .competence-conteneur img{
@@ -147,7 +153,7 @@ progress[value]::-webkit-progress-value {
 }
 
 .competence-conteneur .titre-competence{
-    font-size: 1.4em;   
+    font-size: 2em;   
 }
 
 .competence-conteneur .infobulle{
@@ -208,7 +214,8 @@ progress:hover ~ .infobulle {
 }
 
 #hobbies header{
-    margin-top: 20px;
+    margin-top: 150px;
+    margin-bottom: 40px;
 }
 #hobbies article{
     margin-top: 30px;
@@ -217,15 +224,17 @@ progress:hover ~ .infobulle {
 .hobbie-conteneur{
     margin-top: 20px;
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 10% 80%;
     grid-gap: 0.5em;
-    align-items: center;      
+    align-items: center;
+    margin-left: 40px;    
 }
 .hobbie-conteneur img{
     margin: auto;
 }
 .hobbie-conteneur span{
-    font-size: 1.4em;    
+    
+    font-size: 2em;    
 }
 
 
@@ -237,15 +246,18 @@ progress:hover ~ .infobulle {
     margin: auto;
     margin-top: 50px;
     padding-left: 90px;
+    margin-bottom: 250px;
     
 }
 
 #contact header{
-    margin-top: 20px;
+    margin-top: 150px;
+    margin-bottom: 50px;
 }
 #contact article{
     margin-top: 20px;
 }
+
 
 .contact-conteneur{
     margin-top: 10px;
@@ -259,11 +271,11 @@ progress:hover ~ .infobulle {
     margin: auto;
 }
 .contact-conteneur span{
-    font-size: 1.4em;    
+    font-size: 2em;    
 }
 
 #formation{
-    
+    margin-top: 50px;
     font-size: 0.9rem;
     /*positionné sur la deuxième colonne*/
     grid-column: 2/3;
@@ -273,19 +285,20 @@ progress:hover ~ .infobulle {
     align-self: stretch;
     border-style: solid;
     padding-left: 30px;
-
+    padding-bottom: 65px;
 
 }
 
 
 #formation header{
-    margin-top: 20px;
-    font-size: 1.6em;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 45px;
 }
 
 
 #formation header span{    
-    font-size: 1.6em;
+    font-size: 45px;
 }
 
 #formation article{
@@ -297,7 +310,7 @@ progress:hover ~ .infobulle {
 }
 
 .formation-conteneur dl dt h3{
-    font-size: 1.6em;
+    font-size: 2.4em;
     text-align: left;
     margin-left: 30px;
 }
@@ -307,12 +320,14 @@ progress:hover ~ .infobulle {
     grid-template-columns: 75% 25%;    
     align-items: center;
     font-weight: normal;
-    font-size: 1.5em;
+    font-size: 1.8em;
 }
 
-.formation-conteneur dl dd .date-formation{
+.formation-conteneur dl dd .date-formation{    
     grid-column: 2;
     grid-row: 1/3;
+    margin-left: 50px;
+    font-size: 24px;
 }
 
 
@@ -349,13 +364,13 @@ progress:hover ~ .infobulle {
 }
 
 .experience-conteneur dl dt h3 {
-    font-size: 1.6em;
+    font-size: 2.4em;
     text-align: left;
     margin-left: 30px;
 }
 
 .experience-conteneur dl dt .duree-experience {
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: normal;
 }
 
@@ -364,10 +379,11 @@ progress:hover ~ .infobulle {
 }
 
 .experience-conteneur dl dd .lieu-experience{
-    font-size: 1.5em;
+    font-size: 1.85em;
 }
 
 .experience-conteneur dl dd .sujet-experience{
+    margin-top: 10px;
     font-size: 1.5em;
     font-weight: normal;
 }
@@ -445,6 +461,7 @@ progress:hover ~ .infobulle {
 
 #langues{
 
+    margin-top: 290px;
     
     font-size: 0.6rem;
 
@@ -452,7 +469,6 @@ progress:hover ~ .infobulle {
     grid-column: 1; 
     grid-row : 4/5;
     margin: auto;
-    margin-top: 0px;
     
     padding-left: 30px;
     
@@ -461,12 +477,13 @@ progress:hover ~ .infobulle {
 }
 
 #langues header{
-    margin-top: 50px;
-    font-size: 1.6em;
+    margin-top: 65px;
+    margin-bottom: 86px;
+    font-size: 45px;
 }
 
 #langues header span{
-    font-size: 1.6em;
+    font-size: 45px;
 }
 
 #langues article{
@@ -487,7 +504,7 @@ progress:hover ~ .infobulle {
 }
 
 .langue-conteneur .titre-langue{
-    font-size: 1.6em; 
+    font-size: 3em;
     margin-left: 20px;
 }
 
@@ -497,7 +514,7 @@ progress:hover ~ .infobulle {
 }
 
 .langue-conteneur .niveau-langue{
-    font-size: 1.1em; 
+    font-size: 1.5em; 
     margin-left: 20px;
     font-weight: normal;
 }
