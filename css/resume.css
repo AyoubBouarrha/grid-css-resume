@@ -275,7 +275,7 @@ progress:hover ~ .infobulle {
 }
 
 #formation{
-    margin-top: 50px;
+    margin-top: 224px;
     font-size: 0.9rem;
     /*positionné sur la deuxième colonne*/
     grid-column: 2/3;
@@ -343,7 +343,7 @@ progress:hover ~ .infobulle {
 }
 
 #experiences header{
-    margin-top: 50px;    
+    margin-top: 172px;    
     font-size: 1.6em;
 }
 
@@ -389,12 +389,19 @@ progress:hover ~ .infobulle {
 }
 
 .experience-conteneur dl dd .technologies-experience{
-    margin-top: 10px;
+    margin-top: 28px;
     font-size: 1.2em;
     font-weight: normal;
     display: block;
 }
 
+.experience-conteneur dl dd .technologies-experience ul{
+    font-size: 1.8em;
+}
+
+.experience-conteneur dl dd .technologies-experience strong{
+    font-size: 1.8em;
+}
 
 
 #certifications{
@@ -461,7 +468,7 @@ progress:hover ~ .infobulle {
 
 #langues{
 
-    margin-top: 290px;
+    margin-top: 150px;
     
     font-size: 0.6rem;
 
@@ -477,7 +484,7 @@ progress:hover ~ .infobulle {
 }
 
 #langues header{
-    margin-top: 65px;
+    margin-top: 172px;   
     margin-bottom: 86px;
     font-size: 45px;
 }
